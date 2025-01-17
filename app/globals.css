@@ -1,21 +1,68 @@
+/* Importing Material Symbols */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/* tailwind initialization */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Material Symbols Settings */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-[family-name:var(--font-geist-mono)];
+}
+
+.topNav {
+  @apply flex flex-col md:flex-row bg-yellow-300 p-2 justify-between;
+}
+
+.topNav div {
+  @apply flex flex-row flex-row gap-4 justify-center;
+}
+
+.topNav-link {
+  @apply flex flex-row items-center justify-center;
+}
+
+.topNav-code {
+  @apply text-center;
+}
+
+.topNav-code span {
+  @apply text-red-600 font-bold;
+}
+
+.desktopNav {
+  @apply hidden md:block bg-[#0B4CAE] text-white p-2 md:flex md:items-center md:justify-evenly font-medium;
+}
+
+.desktopNav-link {
+  @apply hover:text-yellow-400;
+}
+
+.mobileNav {
+  @apply md:hidden bg-[#0B4CAE] text-white px-4;
+}
+
+.mobileNav-icon {
+  @apply flex flex-row items-center gap-4;
+}
+
+.mobileNav button span {
+  @apply text-3xl;
+}
+
+.mobileNav-links {
+  @apply flex flex-col items-start gap-3 p-4;
+}
+
+.mobileNav-link {
+  @apply hover:text-yellow-400;
 }
