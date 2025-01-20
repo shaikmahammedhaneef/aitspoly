@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FiMail, FiMapPin } from "react-icons/fi";
+import { FiMail, FiMapPin, FiMenu } from "react-icons/fi";
 
 export default function NavBar() {
     const [open, setOpen] = useState(false);
@@ -62,14 +62,13 @@ export default function NavBar() {
                     <Link className="desktopNav-link" href={"/academics"}>Academics</Link>
                     <Link className="desktopNav-link" href={"/facilities"}>Facilities</Link>
                     <Link className="desktopNav-link" href={"/commitees"}>Commitees</Link>
-                    <Link className="desktopNav-link" href={"/gallery"}>Gallery</Link>
                     <Link className="desktopNav-link" href={"/contact"}>Contact Us</Link>
                     <Link className="desktopNav-link" href={"/grievance"}>Grievance</Link>
                     <Link className="desktopNav-link" href={"/studentportal"}>Student Portal</Link>
                 </nav>
                 <nav className="mobileNav">
                     <div className="mobileNav-icon">
-                        <button onClick={() => setOpen(!open)}><span className="material-symbols-outlined">{open ? "close" : "menu"}</span></button>
+                        <button onClick={() => setOpen(!open)}>{open ? <FiMenu /> : <FiX />}</button>
                         <h1>Navigation Menu</h1>
                     </div>
                     <div className={`${open ? "" : "hidden"}`}>
@@ -78,7 +77,6 @@ export default function NavBar() {
                             <Link className="mobileNav-link" href={"/academics"}>Academics</Link>
                             <Link className="mobileNav-link" href={"/facilities"}>Facilities</Link>
                             <Link className="mobileNav-link" href={"/commitees"}>Commitees</Link>
-                            <Link className="mobileNav-link" href={"/gallery"}>Gallery</Link>
                             <Link className="mobileNav-link" href={"/contact"}>Contact Us</Link>
                             <Link className="mobileNav-link" href={"/grievance"}>Grievance</Link>
                             <Link className="mobileNav-link" href={"/studentportal"}>Student Portal</Link>
