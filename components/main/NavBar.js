@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FiMail, FiMapPin, FiMenu } from "react-icons/fi";
+import { FiMail, FiMapPin, FiMenu, FiX } from "react-icons/fi";
 
 export default function NavBar() {
     const [open, setOpen] = useState(false);
