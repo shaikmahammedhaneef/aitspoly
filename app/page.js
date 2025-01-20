@@ -31,7 +31,7 @@ export default function Home() {
       <NavBar />
       <div className="w-full">
         <Image src={"/aitsfull.png"} width={200} height={200} alt="aitsfull" unoptimized priority className="w-full h-max" />
-        <div className="m-4 p-4 md:p-8 md:m-8 bg-yellow-200 rounded-3xl flex flex-col md:flex-row items-center">
+        {/* <div className="m-4 p-4 md:p-8 md:m-8 bg-yellow-200 rounded-3xl flex flex-col md:flex-row items-center">
           <div className="md:w-1/3 h-max bg-white text-center rounded-3xl overflow-hidden">
             <Image src={"/chairman.webp"} width={200} height={200} alt="Chairman" unoptimized className="w-full h-max" />
             <h1 className="text-xl font-semibold text-orange-700 mt-4">Sri C. Gangi Reddy Garu</h1>
@@ -48,33 +48,107 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div> */}
+        <div className="w-full bg-gradient-to-br from-cyan-700 to-cyan-900 p-10 md:p-16 text-white">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide border-b-4 border-white pb-4 mb-6 inline-block">
+              About the Annamacharya Group
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-justify md:text-center font-[var(--font-geist-sans)]">
+              Annamacharya Educational Trust was founded in the year <span className="font-semibold text-yellow-400">1997</span>
+              by a group of highly educated and service-minded individuals with a noble intention of providing professional
+              and higher education to students coming from backward rural areas of Rayalaseema.
+            </p>
+
+            <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-justify md:text-center font-[var(--font-geist-sans)]">
+              The motto of the trust is:
+              <span className="font-semibold text-yellow-400"> “Vidvan Sarvatra Pujyathe.” </span>
+              The Educational Trust was registered in <span className="font-semibold text-yellow-400">1997</span> with Regd. No.
+              <span className="font-semibold text-yellow-400"> 135/IV/97</span> with its headquarters in Hyderabad.
+              This Trust, the promoting body, established colleges in
+              <span className="text-yellow-400"> Rajampet, Kadapa District, Piglipur, Ranga Reddy District,</span> and
+              <span className="text-yellow-400"> Tirupati, Chittor District.</span>
+            </p>
+
+            <p className="mt-6 text-lg md:text-xl leading-relaxed font-light text-justify md:text-center font-[var(--font-geist-sans)]">
+              The mission of the Annamacharya Educational Trust is to provide
+              <span className="font-semibold text-yellow-400"> quality education</span> to the needy students of
+              the Rayalaseema region. The Trust aims to expand further by establishing more technical and non-technical
+              institutions in <span className="text-yellow-400">Andhra Pradesh.</span>
+            </p>
+          </div>
         </div>
-        <div className="w-full text-center p-8">
-          <h1 className="text-5xl">Vision</h1>
-          <p className="m-2 my-8 text-2xl">"Empowering students to become highly skilled, innovative, and ethical technicians, equipped to excel in their chosen fields and contribute to the betterment of society."</p>
-          <h1 className="text-5xl">Mission</h1>
-            <div className="p-4 m-4 text-2xl">M1: Foster employability, higher education, and research by providing high-quality technical education that enhances knowledge and skills.</div>
-            <div className="p-4 m-4 text-2xl">M2: Enhance teaching and research capabilities through investment in quality infrastructure and resources.</div>
-            <div className="p-4 m-4 text-2xl">M3: Empower rural students with technical skills, ethics, innovation, and leadership, enabling them to contribute to sustainable national development and the betterment of society."</div>
+        <div className="bg-white p-8 font-[family-name:var(--font-geist-sans)]">
+          <h1 className="text-xl text-center text-gray-500">POLYTECHNIC COURSES OFFERED</h1>
+          <div className="flex flex-wrap justify-center gap-6 p-6">
+            {/* DCME - Computer Engineering */}
+            <div className="relative w-60 h-80 rounded-xl shadow-2xl bg-gradient-to-br from-red-500 via-pink-500 to-red-700 text-white flex flex-col items-center justify-between p-6 hover:scale-105 transition-all duration-300">
+              <h1 className="text-2xl font-extrabold uppercase tracking-wide">DIPLOMA</h1>
+              <span className="text-xl">in</span>
+              <h2 className="text-xl font-semibold text-center">Computer Engineering</h2>
+              <p className="text-sm font-light text-center opacity-90">
+                3-Year Course
+              </p>
+              <span className="bg-white text-red-600 px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                DCME
+              </span>
+            </div>
+
+            {/* DECE - Electronics & Communication */}
+            <div className="relative w-60 h-80 rounded-xl shadow-2xl bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-700 text-white flex flex-col items-center justify-between p-6 hover:scale-105 transition-all duration-300">
+              <h1 className="text-2xl font-extrabold uppercase tracking-wide">DIPLOMA</h1>
+              <span className="text-xl">in</span>
+              <h2 className="text-xl font-semibold text-center">Electronics & Communication Engineering</h2>
+              <p className="text-sm font-light text-center opacity-90">
+                3-Year Course
+              </p>
+              <span className="bg-white text-blue-600 px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                DECE
+              </span>
+            </div>
+
+            {/* DEEE - Electrical & Electronics */}
+            <div className="relative w-60 h-80 rounded-xl shadow-2xl bg-gradient-to-br from-green-500 via-lime-500 to-green-700 text-white flex flex-col items-center justify-between p-6 hover:scale-105 transition-all duration-300">
+              <h1 className="text-2xl font-extrabold uppercase tracking-wide">DIPLOMA</h1>
+              <span className="text-xl">in</span>
+              <h2 className="text-xl font-semibold text-center">Electrical & Electronics Engineering</h2>
+              <p className="text-sm font-light text-center opacity-90">
+                3-Year Course
+              </p>
+              <span className="bg-white text-green-600 px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                DEEE
+              </span>
+            </div>
+          </div>
         </div>
-        <div>
-          <div className="w-full bg-yellow-100 flex flex-row justify-around items-center p-8">
-            <div className="bg-white p-4 size-32 rounded-full flex flex-col items-center justify-center">
-              <h1 className="text-red-500 font-bold text-3xl">3</h1>
-              <p>Departments</p>
+        <div className="bg-gradient-to-br from-yellow-100 to-yellow-300 py-16 px-6">
+          <div className="container mx-auto flex flex-wrap justify-center gap-8">
+
+            {/* Stats Card 1 */}
+            <div className="w-64 p-8 bg-white/70 backdrop-blur-lg shadow-xl rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <h1 className="text-6xl font-extrabold text-red-600 drop-shadow-md">3</h1>
+              <p className="text-lg font-semibold text-gray-800 mt-2 tracking-wide">Departments</p>
             </div>
-            <div className="bg-white p-4 size-32 rounded-full flex flex-col items-center justify-center">
-              <h1 className="text-red-500 font-bold text-3xl">20+</h1>
-              <p>Labs</p>
+
+            {/* Stats Card 2 */}
+            <div className="w-64 p-8 bg-white/70 backdrop-blur-lg shadow-xl rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <h1 className="text-6xl font-extrabold text-red-600 drop-shadow-md">20+</h1>
+              <p className="text-lg font-semibold text-gray-800 mt-2 tracking-wide">Labs</p>
             </div>
-            <div className="bg-white p-4 size-32 rounded-full flex flex-col items-center justify-center">
-              <h1 className="text-red-500 font-bold text-3xl">50+</h1>
-              <p>Faculties</p>
+
+            {/* Stats Card 3 */}
+            <div className="w-64 p-8 bg-white/70 backdrop-blur-lg shadow-xl rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <h1 className="text-6xl font-extrabold text-red-600 drop-shadow-md">50+</h1>
+              <p className="text-lg font-semibold text-gray-800 mt-2 tracking-wide">Faculties</p>
             </div>
-            <div className="bg-white p-4 size-32 rounded-full flex flex-col items-center justify-center">
-              <h1 className="text-red-500 font-bold text-3xl">100+</h1>
-              <p>Students</p>
+
+            {/* Stats Card 4 */}
+            <div className="w-64 p-8 bg-white/70 backdrop-blur-lg shadow-xl rounded-xl text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <h1 className="text-6xl font-extrabold text-red-600 drop-shadow-md">100+</h1>
+              <p className="text-lg font-semibold text-gray-800 mt-2 tracking-wide">Students</p>
             </div>
+
           </div>
         </div>
       </div>
