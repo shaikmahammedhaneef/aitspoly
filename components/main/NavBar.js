@@ -48,38 +48,37 @@ export default function NavBar() {
                 <div className="text-amber-500 animate-infinite-scroll text-nowrap overflow-hidden w-full px-4 py-2 text-center sm:text-left">
                     Diploma III Year Regular and Supplementary Results have been released!
                 </div>
-
-                <button className="bg-green-500 w-full h-full sm:w-1/12 p-2 font-semibold z-10 text-center">
-                    Login
-                </button>
             </div>
             <div className="w-full">
                 <div className="w-full flex items-center justify-center p-2">
                     <Image src={"/logo.png"} priority unoptimized width={200} height={200} alt="logo" className="w-full md:w-2/3 h-max" />
                 </div>
                 <nav className="desktopNav">
+                    <Link className="desktopNav-link" href={"/"}>Home</Link>
                     <Link className="desktopNav-link" href={"/about"}>About Us</Link>
                     <Link className="desktopNav-link" href={"/academics"}>Academics</Link>
                     <Link className="desktopNav-link" href={"/facilities"}>Facilities</Link>
-                    <Link className="desktopNav-link" href={"/commitees"}>Commitees</Link>
+                    <Link className="desktopNav-link" href={"/committees"}>Commitees</Link>
                     <Link className="desktopNav-link" href={"/contact"}>Contact Us</Link>
                     <Link className="desktopNav-link" href={"/grievance"}>Grievance</Link>
-                    <Link className="desktopNav-link" href={"/studentportal"}>Student Portal</Link>
                 </nav>
                 <nav className="mobileNav">
-                    <div className="mobileNav-icon">
-                        <button onClick={() => setOpen(!open)}>{open ? <FiMenu /> : <FiX />}</button>
-                        <h1>Navigation Menu</h1>
+                    <div className="mobileNav-icon flex justify-between h-8 items-center p-4 text-white">
+                        <button onClick={() => setOpen(!open)} className="text-2xl">
+                            {open ? <FiX /> : <FiMenu />}
+                        </button>
+                        <h1 className="text-2xl font-bold">Navigation Menu</h1>
                     </div>
-                    <div className={`${open ? "" : "hidden"}`}>
-                        <div className="mobileNav-links">
-                            <Link className="mobileNav-link" href={"/about"}>About Us</Link>
-                            <Link className="mobileNav-link" href={"/academics"}>Academics</Link>
-                            <Link className="mobileNav-link" href={"/facilities"}>Facilities</Link>
-                            <Link className="mobileNav-link" href={"/commitees"}>Commitees</Link>
-                            <Link className="mobileNav-link" href={"/contact"}>Contact Us</Link>
-                            <Link className="mobileNav-link" href={"/grievance"}>Grievance</Link>
-                            <Link className="mobileNav-link" href={"/studentportal"}>Student Portal</Link>
+
+                    <div className={`mobileNav-links-container ${open ? 'block' : 'hidden'}`}>
+                        <div className="mobileNav-links flex flex-col bg-blue-600 p-6 space-y-4">
+                            <Link href="/" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Home</Link>
+                            <Link href="/about" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">About Us</Link>
+                            <Link href="/academics" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Academics</Link>
+                            <Link href="/facilities" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Facilities</Link>
+                            <Link href="/committees" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Committees</Link>
+                            <Link href="/contact" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Contact Us</Link>
+                            <Link href="/grievance" className="mobileNav-link text-white text-xl hover:text-gray-200 transition-transform transform hover:scale-105">Grievance</Link>
                         </div>
                     </div>
                 </nav>
