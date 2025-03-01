@@ -9,9 +9,9 @@ export default function AboutUs() {
 
             {/* About Annacharya Group Section */}
             <section className="font-[family-name:var(--font-geist-sans)] text-center py-12 px-4 animate__animated animate__fadeInUp">
-                <h1 className="text-5xl font-extrabold text-gray-900 mb-4">About Annacharya Group</h1>
+                <h1 className="text-5xl font-extrabold text-gray-900 mb-4">About Annamacharya Group</h1>
                 <p className="text-lg text-gray-700 mx-auto max-w-3xl leading-relaxed">
-                    Annacharya Group of Institutions is committed to imparting quality education and fostering an environment of growth and innovation.
+                    Annamacharya Group of Institutions is committed to imparting quality education and fostering an environment of growth and innovation.
                     We aim to equip our students with the knowledge and skills required to excel in their professional careers.
                 </p>
             </section>
